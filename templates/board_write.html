@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+{% include "navbar.html" %}
+
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section class="container pt mt" id="guestbook">
+      <h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">게시글 작성</h2>
+      <div class="section-desc fonsiz-sm color-basic-opac letsp-sm ws-xs mt-2 mb-4"></div>
+          <section id="services" class="services">
+            <form action="/board_insert" id="frmBoard">
+              <div class="card shadow">
+                <div class="card-body">
+                <div class="table-responsive">
+                <table class="table borderless table-hover align-middle">
+                  <tr style="height:45px;border-top:solid 1px #dddddd;">
+                      <td width="20%" align="center">제 목</td>
+                      <td width="80%" align="left"><input type="input" placeholder="제 목" name="b_title" style="width:100%;"></td>
+                  </tr>
+                  <tr style="height:45px;border-top:solid 1px #dddddd;">
+                      <td width="20%" align="center">작성자</td>
+                      <td width="80%" align="left"><input type="input" placeholder="작성자" name="b_writer"></td>
+                  </tr>
+                  <tr style="height:45px;border-top:solid 1px #dddddd;">
+                      <td width="20%" align="center">내 용</td>
+                      <td width="80%" align="left"><textarea name="b_note" style="width:100%;" rows="7"></textarea></td>
+                  </tr>
+                  <tr style="height:45px;border-top:solid 1px #dddddd;" align="center">
+                      <td width="100%" colspan="2">
+                          <button class="btn btn-outline-success my-1 my-sm-0" style="margin-right:20px;" onclick="javascript:document.getElementById('frmBoard').submit();">저장</button>
+                          <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right:20px;" onclick="location.heref='/';">목록</button>
+                      </td>
+                  </tr>
+                </table>
+                </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </section><!-- End Services Section -->
+</main><!-- End #main -->
+
+{% endblock %}
